@@ -3,8 +3,8 @@
 * {
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
-
 
 body {
   background-color: #f6f8fc;
@@ -15,14 +15,7 @@ body {
   height: 100vh;
   padding: 1rem;
   background-color: #fff;
-  /* display: none; */
 }
-/* .pokemonCard {
-  width: 100vw;
-  height: 100vh;
-  padding: 1rem;
-  background-color: #fff;
-} */
 
 @media screen and (min-width: 992px) {
   .content {
@@ -30,13 +23,5 @@ body {
     height: auto;
     margin: 1rem auto;
     border-radius: 1rem;
-    /* display: none; */
   }
-  /* .pokemonCard {
-    max-width: 992px;
-    height: auto;
-    margin: 1rem auto;
-    border-radius: 1rem;
-  } */
-
 }

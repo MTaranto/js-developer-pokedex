@@ -1,7 +1,7 @@
 const pokemonList = document.getElementById("pokemonList");
 const loadMoreButton = document.getElementById("loadMoreButton");
-const maxRecords = 151;
-const limit = 10;
+const maxRecords = 649; // All pokemons that have an image at pokeapi
+const limit = 12;
 let offset = 0;
 
 function loadPokemonItens(offset, limit) {
@@ -36,6 +36,7 @@ function createPokemonCard(pokemon) {
   `;
 }
 
+// New feature - create pokemon detail card
 function createPokemonDetailCard(pokemon) {
   return `
     <div class="pokemon-detail ${pokemon.type}">
@@ -89,6 +90,7 @@ function loadPokemonItens(offset, limit) {
   });
 }
 
+//
 function openPokemonDetail(pokemonNumber) {
   pokeApi.getPokemonByNumber(pokemonNumber).then((pokemon) => {
     const detailSection = document.getElementById("pokemonDetail");

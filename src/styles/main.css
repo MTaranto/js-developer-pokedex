@@ -1,6 +1,8 @@
 @import url(./global.css);
 
+/* Variables */
 :root {
+  /* Colors */
   --color-normal: #a6a877;
   --color-grass: #77c850;
   --color-fire: #ee7f30;
@@ -24,7 +26,7 @@
   --color-opacity: rgba(255, 255, 255, 0.8);
   --color-bg-modal: rgba(0, 0, 0, 0.7);
   --color-pagination: #6c79db;
-
+  /* Font Sizes */
   --font-size-small: 0.625rem;
   --font-size-medium: 0.9rem;
   --font-size-large: 1.2rem;
@@ -39,6 +41,7 @@
   list-style: none;
 }
 
+/* Types */
 .normal {
   background-color: var(--color-normal);
 }
@@ -186,9 +189,7 @@
   }
 }
 
-
-
-/* Estilos do modal de detalhes */
+/* New feature styles */
 #pokemonDetail {
   display: none;
   position: fixed;
@@ -199,25 +200,25 @@
   background: var(--color-bg-modal);
   z-index: 1000;
   padding: 1rem;
-  overflow-y: scroll; /* Permite rolagem vertical */
-
+  overflow-y: scroll;
 }
 
 #pokemonDetail.open {
-  display: block; /* Mudado para block ao invés de flex */
-  padding: 0; /* Remove padding do container principal */
+  display: block;
+  padding: 0;
 }
+
 .pokemon-detail {
   position: relative;
   width: 100%;
   height: 100vh;
   max-width: 425px;
-  min-height: min-content; /* Altura mínima baseada no conteúdo */
+  min-height: min-content;
   padding: 2rem;
   border-radius: 1rem;
   color: var(--color-white);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  margin: 2rem auto; /* Centraliza o card e adiciona espaço no topo e base */
+  margin: 2rem auto;
 }
 
 .close-button {
@@ -274,11 +275,12 @@
 .detail-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 1rem;
   background: rgba(255, 255, 255, 0.1);
   padding: 1.5rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
+  /* margin-block: -1rem; */
 }
 
 .pokemon-image {
@@ -336,7 +338,7 @@
     width: 0%;
   }
   to {
-    width: var(--final-width); /* Variável para a largura final */
+    width: var(--final-width);
   }
 }
 
@@ -353,12 +355,12 @@
   text-align: right;
   font-size: 0.8rem;
   font-weight: bold;
-  width: 0; /* Começa em 0% */
-  transition: width 0.3s ease; /* Para transição suave */
+  width: 0;
+  transition: width 0.3s ease;
 }
 
 .stat-fill.animate {
-  animation: fillStat 1s forwards; /* Aplica a animação */
+  animation: fillStat 1s forwards;
 }
 
 body.modal-open {
@@ -377,7 +379,7 @@ body.modal-open {
   }
 
   .pokemon-detail {
-    margin: 1rem auto; /* Reduz a margem em telas menores */
+    margin: 1rem auto;
       padding: 1.5rem;
   }
 
@@ -395,7 +397,6 @@ body.modal-open {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     margin-top: auto;
-    margin-left: -11rem;
+    margin-left: -10.5rem;
   }
-
 }
