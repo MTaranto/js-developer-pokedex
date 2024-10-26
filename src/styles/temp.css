@@ -1,0 +1,63 @@
+
+#pokemonDetail {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-bg-modal);
+  z-index: 1000;
+  padding: 1rem;
+  overflow-y: auto; /* Permite rolagem vertical */
+}
+
+#pokemonDetail.open {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinha ao topo ao invés de center */
+  padding: 2rem 1rem; /* Adiciona mais padding no topo e base */
+}
+
+.pokemon-detail {
+  position: relative;
+  width: 100%;
+  max-width: 425px;
+  min-height: min-content; /* Altura mínima baseada no conteúdo */
+  max-height: none; /* Remove a altura máxima fixa */
+  padding: 2rem;
+  border-radius: 1rem;
+  color: var(--color-white);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  margin: auto; /* Centraliza o card */
+}
+
+.detail-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem; /* Adiciona margem na base */
+}
+
+@media (max-width: 425px) {
+  #pokemonDetail.open {
+    padding: 1rem; /* Reduz o padding em telas menores */
+  }
+
+  .pokemon-detail {
+    padding: 1.5rem;
+    margin: 0; /* Remove margem em telas menores */
+  }
+
+  .detail-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .basic-info {
+    margin-top: 0; /* Remove margem negativa em telas menores */
+  }
+}
